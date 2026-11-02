@@ -1,0 +1,17 @@
+# --- Frequency Calculation (Partial Hessian) ---
+IBRION = 5       # Triggers internal finite-differences frequency calculation
+NFREE = 2        # Calculates central differences (displaces atoms in both directions)
+POTIM = 0.015    # The physical distance (in Å) the atoms are nudged 
+NSW = 1          # VASP overrides this for IBRION=5, but 1 is safest
+
+# --- Strict Force Requirements ---
+EDIFF = 1E-07    # Must be tighter than standard relaxations to get accurate forces
+PREC = Accurate  # Ensures grid precision for tiny atomic movements
+LREAL = False    # Projection in reciprocal space avoids real-space grid errors in forces
+
+# (Keep your standard ISMEAR, SIGMA, ENCUT, ISPIN, and MAGMOM settings)
+ISMEAR = 0
+SIGMA = 0.05
+ISPIN = 2
+MAGMOM = 13*0.2 42*1.5 1*1.0 1*0.0
+NELM = 200

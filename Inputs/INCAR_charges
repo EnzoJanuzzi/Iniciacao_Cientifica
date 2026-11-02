@@ -1,0 +1,31 @@
+# --- Grid Lock for Charge Density Subtraction ---
+NGX = 150
+NGY = 150
+NGZ = 150
+NGXF = 224
+NGYF = 224
+NGZF = 224
+
+# --- Consistencia com a Otimizacao ---
+PREC = High
+LREAL = Auto
+ADDGRID = True
+ISMEAR = 0
+SIGMA = 0.05
+ISPIN = 2
+LMAXMIX = 4
+MAGMOM = XXX 1*1.0 1*0.0   
+
+# --- Trava de Movimento e Precisao Eletronica ---
+IBRION = -1
+NSW = 0
+EDIFF = 1e-06
+ALGO = Normal
+NELM = 200
+
+# --- Input/Output Limpo ---
+ISTART = 0
+ICHARG = 2
+LCHARG = True
+LWAVE = False
+SYSTEM = Charge_XX_XX # Charge_System_Intermed
